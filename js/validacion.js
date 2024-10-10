@@ -18,6 +18,34 @@
     })
   })()
 
+  
+  document.getElementById('formRegistro').addEventListener('submit', function(event) {
+    event.preventDefault();  // Evita el envío inmediato del formulario
+  
+    var password1 = document.getElementById("password1");
+    var password2 = document.getElementById("password2");
+    var errorPassword = document.getElementById("errorPassword");
+  
+    // Verificar si las contraseñas coinciden
+    if (password1.value !== password2.value) {
+      password2.setCustomValidity("Las contraseñas no coinciden");
+      errorPassword.style.display = "block";
+      errorPassword.textContent = "Las contraseñas no coinciden";
+      password2.classList.add("is-invalid");
+    } else {
+      password2.setCustomValidity("");
+      password2.classList.remove("is-invalid");
+      password2.classList.add("is-valid");
+    }
+  
+    // Si el formulario es válido, se puede enviar
+    if (this.checkValidity()) {
+      this.submit();  // Envía el formulario si ok
+    }
+  });
+  
+
+
 
 // obtener el formulario y el checkbox
 const modal = document.getElementById('modalTerminos');
@@ -49,3 +77,4 @@ form.addEventListener('submit', function (event) {
   // Añadir clase 'was-validated' al formulario para activar estilos de Bootstrap
   form.classList.add('was-validated');
 });
+
