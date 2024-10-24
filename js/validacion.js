@@ -74,8 +74,6 @@ form.addEventListener('submit', function(event) {
       this.submit();  // Envía el formulario si ok
     }
   });
-  
-
 
 
 // obtener el formulario y el checkbox
@@ -83,6 +81,17 @@ const modal = document.getElementById('modalTerminos');
 const checkbox = document.getElementById('cbterminos');
 const form = document.getElementById('form')
 const btnTerminos = document.getElementById('btnTerminos');
+
+function validarTerminos() {
+  if (!terminos.checked) {
+    mostrarError(btnTerminos, 'Debes aceptar los términos.');
+    btnTerminos.classList.add('text-danger');
+    return false;
+  }
+  mostrarExito(btnTerminos);
+  btnTerminos.classList.remove('text-danger');
+  return true;
+}
 
 // validar términos y condiciones
 function validateTerms() {
