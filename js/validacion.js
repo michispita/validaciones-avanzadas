@@ -1,5 +1,5 @@
 // Validación de formularios de Bootstrap
-
+(() => {
   'use strict';
   
   // Selecciona todos los formularios que necesitan validación personalizada de Bootstrap
