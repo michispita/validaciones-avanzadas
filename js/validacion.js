@@ -15,7 +15,7 @@
       form.classList.add('was-validated');
     }, false);
   });
-
+}); 
 
 // Validación de contraseñas
 document.getElementById('form').addEventListener('submit', function(event) {
@@ -45,7 +45,7 @@ const checkbox = document.getElementById('cbterminos');
 const form = document.getElementById('form');
 const btnTerminos = document.getElementById('btnTerminos');
 const mdlTerminos = document.getElementById('mdlterminos');
-
+const btnRegistrar= document.getElementById("btnRegistrar");
 function validateTerms() {
   if (!checkbox.checked) {
     // Mensaje de error si no se ha marcado el checkbox
@@ -72,4 +72,10 @@ form.addEventListener('submit', function (event) {
 
   // Añadir clase 'was-validated' al formulario para activar estilos de Bootstrap
   form.classList.add('was-validated');
+  btnRegistrar.addEventListener("click", function(e) {
+    if (form.checkValidity()) {
+      alert("Registro Exitoso ")}
+      
+  })
+
 });
