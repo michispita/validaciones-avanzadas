@@ -15,7 +15,7 @@
       form.classList.add('was-validated');
     }, false);
   });
-})();
+
 
 // Validación de contraseñas
 document.getElementById('form').addEventListener('submit', function(event) {
