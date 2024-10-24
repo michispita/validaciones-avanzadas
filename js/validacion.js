@@ -19,7 +19,7 @@
   })
 })()
 
-const form = document.getElementById('miFormulario');
+const formRegistro = document.getElementById('miFormulario');
 const password1 = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
@@ -47,7 +47,7 @@ form.addEventListener('submit', function(event) {
         form.classList.add('was-validated')
       }, false)
     })
-  })()
+  ()
 
   
   document.getElementById('formRegistro').addEventListener('submit', function(event) {
