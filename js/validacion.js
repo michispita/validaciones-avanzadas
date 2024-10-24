@@ -1,10 +1,10 @@
 // Validación de formularios de Bootstrap
-(() => {
+
   'use strict';
   
   // Selecciona todos los formularios que necesitan validación personalizada de Bootstrap
   const forms = document.querySelectorAll('.needs-validation');
-  
+
   // Itera sobre ellos y previene el envío si no son válidos
   Array.from(forms).forEach(form => {
     form.addEventListener('submit', event => {
